@@ -14,11 +14,14 @@ public class CreateCarServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String carName = request.getParameter("car-name");
-
         System.out.println(carName);
 
-        request.getRequestDispatcher("index.html").forward(request, response);
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
 
+        String jsonResponse = "{\"message\": \"Carro recebido com sucesso!\", \"carName\": \"" + carName + "\"}";
+
+        response.getWriter().write(jsonResponse);
     }
 
 }
