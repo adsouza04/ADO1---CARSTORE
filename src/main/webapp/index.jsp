@@ -1,5 +1,6 @@
 <html>
 <body>
+<h1>MENU</h1>
 <h2>Cadastro de Carro</h2>
 <form action="create-car" method="post">
     <label>Nome do Carro:</label>
